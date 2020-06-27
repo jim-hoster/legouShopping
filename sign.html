@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p2p公共页面</title>
+    <link rel="stylesheet" href="./dist/css/reset.min.css">
+    <link rel="stylesheet" href="./dist/css/common.min.css">
+    <link rel="stylesheet" href="./dist/css/sign.min.css">
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="header container-fluid">
+        <ul class="container">
+            <li>客服电话：17693182826 （9:00-18:00工作日 ）</li>
+            <li class="scan-ico">
+                <img src="./images/客户端.svg" alt="">
+                <div class="scan">
+                    <img src="./images/scan (1).png" alt="">
+                    <p>手机客户端下载</p>
+                </div>
+            </li>
+            <li><a href="#">手机客户端</a></li>
+            <li class="scan-ico">
+                <img src="./images/微信公众号.svg" alt="">
+                <div class="scan">
+                    <img src="./images/scan (2).png" alt="">
+                    <p>关注手机公众号</p>
+                </div>
+            </li>
+            <li class="warn">出借有风险，选择需谨慎</li>
+            <li><a href="./login.html">登录</a></li>
+            <li><a href="./sign.html" class="sign">注册</a></li>
+            <li><a href="#">企业账户</a></li>
+            <li><a href="#">社区</a></li>
+        </ul>
+    </div>
+    <!-- 导航 -->
+    <div class="nav container">
+        <a href="./index.html"><img src="./images/baselogo.png" alt=""></a>
+        <p>用户注册</p>
+
+    </div>
+
+    <!-- 注册页 -->
+    <div class="sign-box container">
+        <img src="./images/sign.png" alt="">
+        <div class="sign">
+            <div class="detail">
+                <p class="borrow">我要借款</p>
+                <p class="collection">我要出借</p>
+                <div class="login-detail">
+                    <p class="username">
+                        <img src="./images/用户名.svg" alt=""><input type="text" placeholder="请输入正确的名字">
+                        <span class="errMsg"></span>
+                    </p>
+                    <p class="nickname">
+                        <img src="./images/昵称.svg" alt="">
+                        <input type="text" placeholder="请输入您的昵称">
+                        <span class="errMsg"></span>
+                    </p>
+                    <p class="pwd">
+                        <img src="./images/密码.svg" alt=""><input type="password" placeholder="请设置6-16为数字，字母组合密码">
+                        <span class="errMsg"></span>
+                        <img src="./images/眼睛_闭.svg" alt="" id="pwdEye">
+                    </p>
+                    <p class="email">
+                        <img src="./images/邮箱.svg" alt="">
+                        <input type="email" placeholder="请输入您的邮箱地址">
+                        <span class="errMsg"></span>
+                    </p>
+
+                    <p id="submitBtn">
+                        <input type="button" value="注册">
+                    </p>
+                    <p class="has"><span>使用已有账号<a href="./login.html">登录</a></span></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="./lib/vlitdte/jquery.validate.min.js"></script>
+<script src="./lib/gvtify/gVerify.js"></script>
+<script src="./js/sign.js"></script>

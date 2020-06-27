@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p2p账户充值</title>
+    <link rel="stylesheet" href="./dist/css/reset.min.css">
+    <link rel="stylesheet" href="./dist/css/common.min.css">
+    <link rel="stylesheet" href="./dist/css/recharge.min.css">
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="header container-fluid">
+        <ul class="container">
+            <li>客服电话：17693182826 （9:00-18:00工作日 ）</li>
+            <li class="scan-ico">
+                <img src="./images/客户端.svg" alt="">
+                <div class="scan">
+                    <img src="./images/scan (1).png" alt="">
+                    <p>手机客户端下载</p>
+                </div>
+            </li>
+            <li><a href="#">手机客户端</a></li>
+            <li class="scan-ico">
+                <img src="./images/微信公众号.svg" alt="">
+                <div class="scan">
+                    <img src="./images/scan (2).png" alt="">
+                    <p>关注手机公众号</p>
+                </div>
+            </li>
+            <li class="warn">出借有风险，选择需谨慎</li>
+            <li id="login"></li>
+            <li id="sign"></li>
+            <li><a href="#">企业账户</a></li>
+            <li><a href="#">社区</a></li>
+        </ul>
+    </div>
+
+    <!-- 充值注意事项 -->
+    <div id="rechargeWarn" class="container">
+        <h2>账户充值注意事项</h2>
+        <p>1. 由于银行系统的限制，充值功能建议使用 IE 内核（IE8及以上）的浏览器。</p>
+        <p>2. 请注意：为打击信用卡套现行为，充值资金必须经过投资回款后方能允许提现。</p>
+    </div>
+
+    <div id="rechargeMethod" class="container">
+        <p><span>线上充值（第三方平台）</span><span class="active">银行卡充值</span></p>
+        <ul id="thirdParty">
+            <li>系统暂不支持，请选用银行卡充值或线下充值</li>
+        </ul>
+        <ul id="bank" class="show">
+            <li>
+                <span>银行名称</span>
+                <span>开户人姓名</span>
+                <span>银行账号</span>
+                <span>开户支行名称</span>
+            </li>
+            <li>
+                <img src="./images/中国工商银行.svg" alt="">
+                <span>奥达</span>
+                <span>62170038233428412750</span>
+                <span>府城大道支行</span>
+            </li>
+            <li>
+                <img src="./images/中国农业银行.svg" alt="">
+                <span>纬帆</span>
+                <span>62170038233428412750</span>
+                <span>成都天府新谷支行</span>
+            </li>
+            <li>
+                <img src="./images/招商银行.svg" alt="">
+                <span>奥达</span>
+                <span>62170038233428412750</span>
+                <span>成都高新天府大道支行</span>
+            </li>
+            <li class="bankDetail">
+                <div>
+                    <p id="bankList">
+                        <span>银行</span>
+                        <select name="bank">
+                            <option value="1">中国工商银行成都府城大道支行</option>
+                            <option value="2">中国农业银行成都天府新谷支行</option>
+                            <option value="3">招商银行成都高新天府大道支行</option>
+                        </select>
+                    </p>
+                    <p>
+                        <span>交易号</span>
+                        <input type="text" name="transaction">
+                    </p>
+
+                    <p>
+                        <span>充值时间</span>
+                        <input type="datetime-local" name="transaction">
+                    </p>
+                    <p id="chargemoney">
+                        <span>充值金额</span>
+                        <input type="number" name="RMB">
+                    </p>
+                    <p>
+                        <span>充值说明</span>
+                        <textarea name="description"></textarea>
+                    </p>
+                    <p>
+                        <span></span>
+                        <input type="button" value="确认提交" id="confirmBtn">
+                    </p>
+                </div>
+            </li>
+        </ul>
+
+
+    </div>
+
+
+
+    <!-- 尾部 -->
+    <div class="footer container">
+        <div class="contact">
+            <div>
+                <div class="left">
+                    <img src="/images/baselogo.png" alt="">
+                    <div>
+                        <span>关注我们</span>
+                        <div class="scan-box">
+                            <img src="./images/scan (1).png" alt="" class="scan">
+                            <img src="./images/微博.svg" alt="" class="scan-ico">
+                        </div>
+                        <div class="scan-box">
+                            <img src="./images/scan (2).png" alt="" class="scan">
+                            <img src="./images/公众号.svg" alt="" class="scan-ico">
+                        </div>
+                        <span>下载手机客户端</span>
+                        <div class="scan-box">
+                            <img src="./images/scan (3).png" alt="" class="scan">
+                            <img src="./images/安卓.svg" alt="" class="scan-ico">
+                        </div>
+                        <div class="scan-box">
+                            <img src="./images/scan (2).png" alt="" class="scan">
+                            <img src="./images/苹果.svg" alt="" class="scan-ico">
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <ul>
+                        <li><a href="#">手机新贷</a></li>
+                        <li><a href="#">ios</a></li>
+                        <li><a href="#">Android</a></li>
+                        <li><a href="#">风险偏好评估</a></li>
+                    </ul>
+
+                    <ul>
+                        <li><a href="#">新手福利</a></li>
+                        <li><a href="#">常用问题</a></li>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">资费介绍</a></li>
+                    </ul>
+
+                    <ul>
+                        <li><a href="#">安全保障</a></li>
+                        <li><a href="#">合规运营</a></li>
+                        <li><a href="#">运营报告</a></li>
+                        <li><a href="#">风险控制</a></li>
+                    </ul>
+
+                    <ul>
+                        <li><a href="#">新新贷介绍</a></li>
+                        <li><a href="#">公告和新闻</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">网站首页</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <ul>
+                <li>友情链接</li>
+                <li><a href="#">上海金融信息行业协会</a></li>
+                <li><a href="#">中国互联网金融协会</a></li>
+                <li><a href="#">网贷之家</a></li>
+                <li><a href="#">网金中国</a></li>
+                <li><a href="#">网贷平台</a></li>
+                <li><a href="#">p2p网贷论</a></li>
+            </ul>
+        </div>
+        <div class="copymesg">
+            <p>Copyright @新新贷（上海）金融信息服务有限公司 沪ICP备12026657号-1 版权所有，未经许可不得复制、转载或摘编，违者必究V6.6.1</p>
+            <p>增值电信业务经营许可证B2-20151008沪公网安备 31010902001060号</p>
+            <img src="./images/认证.png" alt="">
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/recharge.js"></script>

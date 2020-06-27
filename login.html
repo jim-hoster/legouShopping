@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p2登录页面</title>
+    <link rel="stylesheet" type="text/css" href="./dist/css/reset.min.css">
+    <link rel="stylesheet" href="./dist/css/common.min.css">
+    <link rel="stylesheet" href="./dist/css/login.min.css">
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="header container-fluid">
+        <ul class="container">
+            <li>客服电话：17693182826 （9:00-18:00工作日 ）</li>
+            <li class="scan-ico">
+                <img src="./images/客户端.svg" alt="">
+                <div class="scan">
+                    <img src="./images/scan (1).png" alt="">
+                    <p>手机客户端下载</p>
+                </div>
+            </li>
+            <li><a href="#">手机客户端</a></li>
+            <li class="scan-ico">
+                <img src="./images/微信公众号.svg" alt="">
+                <div class="scan">
+                    <img src="./images/scan (2).png" alt="">
+                    <p>关注手机公众号</p>
+                </div>
+            </li>
+            <li class="warn">出借有风险，选择需谨慎</li>
+            <li><a href="./login.html">登录</a></li>
+            <li><a href="./sign.html" class="sign">注册</a></li>
+            <li><a href="#">企业账户</a></li>
+            <li><a href="#">社区</a></li>
+        </ul>
+    </div>
+    <!-- 导航 -->
+    <div class="nav container">
+        <a href="./index.html"><img src="./images/baselogo.png" alt=""></a>
+        <p>欢迎登陆</p>
+
+    </div>
+    <!-- 注册提示 -->
+    <p class="sign container">还没有账号？<a href="./sign.html">立即注册</a>
+    </p>
+    <!-- 登录页面 -->
+    <div class="login-box container">
+        <img src="./images/login.bgimg.jpg" alt="">
+        <div class="login">
+            <p><img src="./images/用户名.svg" alt=""><input type="text" name="username" placeholder="请输入手机号/邮箱/用户名"
+                    autofocus></p>
+            <p><img src="./images/密码.svg" alt=""><input type="password" name="pwd" placeholder="请输入登录密码"></p>
+            <div id="drag"></div>
+            <p class="forget"><input type="checkbox"><span>记住登录名</span><a href="#">忘记密码？</a></p>
+            <p class="submit" id="loginBtn"><input type="button" value="立即登录"></p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="./lib/drag/drag.js"></script>
+<script src="./lib/axios/Qs.js"></script>
+<script src="./js/login.js"></script>
