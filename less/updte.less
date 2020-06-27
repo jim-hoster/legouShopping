@@ -1,0 +1,55 @@
+@import './common.less';
+
+#update {
+    .setDisplay(flex);
+    flex-direction: column;
+
+    >h2 {
+        padding: 20px;
+        color: @basecolor;
+        border-bottom: 3px solid @basecolor;
+    }
+
+    #updateDetail {
+        padding: 20px;
+        .setDisplay(flex);
+
+        img {
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px
+        }
+
+        >div {
+            .setDisplay(flex);
+            flex-direction: column;
+            justify-content: space-between;
+
+            label {
+                text-align: right;
+
+                &#submitBtn {
+                    input {
+                        text-indent: 0;
+                        text-align: center;
+                        background-color: @basecolor;
+                        color: @w-color;
+                        height: 30px;
+                        line-height: 30px;
+                    }
+
+                }
+            }
+
+            input {
+                height: 20px;
+                width: 200px;
+                outline: none;
+                border: 1px solid @basecolor;
+                text-indent: 20px;
+            }
+
+        }
+    }
+
+}

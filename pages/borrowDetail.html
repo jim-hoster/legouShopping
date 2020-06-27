@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="../dist/css/borrowDetail.min.css">
+
+<div id="borrowDetail" class="container">
+    <img alt="">
+    <ul>
+        <li>
+            <span>发布者账号：</span>
+            <span id="acc"></span>
+        </li>
+        <li>
+            <span>借款金额：</span>
+            <input type="text" name="borrowmoney" placeholder="借款金额" id="borrowmoney">
+            <font>元</font>
+
+        </li>
+        <li>
+            <span>借款利息：</span>
+            <input type="text" name="interest" placeholder="借款利息" id="interest">
+            <font>%</font>
+
+        </li>
+        <li>
+            <span>借款期限：</span>
+            <select name="borrowtime" id="borrowtime">
+                <option value="1">1</option>
+                <option value="3">3</option>
+                <option value="6">6</option>
+                <option value="9">9</option>
+                <option value="12">12</option>
+            </select>
+            <font>个月</font>
+
+        </li>
+        <li>
+            <span>还款方式：</span>
+            <label id="repaytype"><input type="radio" name="repaytype" value="0">按月分期：
+                <input type="radio" name="repaytype" value="1">按月到期：</label>
+        </li>
+        <li>
+            <span>最小投标：</span>
+            <input type="text" name="" placeholder="最小投标" id="minbid">
+            <font>元</font>
+
+        </li>
+        <li>
+            <span>投标奖金：</span>
+            <input type="text" name="" placeholder="投标奖金" id="bouns">
+            <font>元</font>
+
+        </li>
+        <li>
+            <span>招标天数：</span>
+            <select name="days" id="days">
+                <option value="1">1</option>
+                <option value="3">3</option>
+                <option value="6">6</option>
+                <option value="9">9</option>
+                <option value="12">12</option>
+            </select>
+            <font>天</font>
+
+        </li>
+        <li>
+            <span>借款标题：</span>
+            <input type="text" placeholder="借款标题" id="title">
+        </li>
+        <li>
+            <span>借款描述：</span>
+           <textarea name="info" id="info" placeholder="借款描述"></textarea>
+        </li>
+        <li>
+            <span></span>
+            <input type="button" value="提交申请" id="confirmBtn">
+        </li>
+
+    </ul>
+</div>
+<script src="../js/borrowDetail.js"></script>

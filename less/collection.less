@@ -1,0 +1,89 @@
+@import './common.less';
+
+#collection {
+    background-color: @w-color;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    >h2 {
+        font-size: @f22;
+        padding: 10px;
+        border-bottom: 3px solid @basecolor;
+    }
+
+    .status {
+        .setDisplay(flex);
+        -webkit-box-align: center;;
+        -webkit-align-items: center;;
+            -ms-flex-align: center;;
+                align-items: center;
+        font-size: @f14;
+        margin-bottom: 20px;
+        padding: 20px;
+
+        >p {
+            span {
+                display: inline-block;
+                padding: 6px;
+                text-align: center;
+                cursor: pointer;
+
+                &.active {
+                    background-color: @basecolor;
+                    color: @w-color;
+                }
+            }
+        }
+    }
+
+    .title {
+        font-size: @f14;
+        .setDisplay(flex);
+        -webkit-box-pack: justify;;
+        -webkit-justify-content: space-between;;
+            -ms-flex-pack: justify;;
+                justify-content: space-between;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        border-bottom: 1px solid @h-color;
+        padding: 0 20px;
+
+        li {
+            width: 100px;
+            padding: 6px;
+        }
+    }
+
+    .detail {
+        height: 200px;
+        padding: 0 20px;
+        margin: 10px auto;
+
+        li {
+            .setDisplay(flex);
+            -webkit-box-pack: justify;;
+            -webkit-justify-content: space-between;;
+                -ms-flex-pack: justify;;
+                    justify-content: space-between;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            padding: 6px;
+
+            span {
+                display: inline-block;
+                width: 100px;
+                height: 30px;
+                .borrow_check {
+                    padding: 6px;
+                    background-color: @basecolor;
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+@import './common.less';
+
+#borrowDetail {
+    .setDisplay(flex);
+    margin-top: 20px;
+    margin-bottom: 50px;
+
+    >ul {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        margin-left: 20px;
+        background-color: @w-color;
+        border-radius: 10px;
+        padding: 10px;
+
+        li {
+            padding: 10px;
+            font-size: @f18;
+            .setDisplay(flex);
+            -webkit-box-align: center;;
+            -webkit-align-items: center;;
+                -ms-flex-align: center;;
+                    align-items: center;
+
+            span {
+                display: inline-block;
+                width: 130px;
+                font-weight: bold;
+                text-align: right;
+                margin-right: 20px;
+            }
+
+            input {
+                text-indent: 10px;
+                border-radius: 2px;
+                outline: none;
+                border: 1px solid @basecolor;
+                padding: 4px 0;
+
+                &#confirmBtn {
+                    padding: 6px 10px;
+                    background-color: @basecolor;
+                    color: @w-color;
+                    text-indent: 0;
+                    cursor: pointer;
+                }
+            }
+
+            textarea {
+                text-indent: 10px;
+                border-radius: 2px;
+
+            }
+            font{
+                margin-left: 6px;
+            }
+
+        }
+
+    }
+
+}

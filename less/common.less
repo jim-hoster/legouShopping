@@ -1,0 +1,233 @@
+
+// 版心盒子
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #EDEDED;
+}
+
+.container-fluid {
+    min-width: 1200px;
+}
+
+// 字体大小
+@f12: 12px;
+@f14: 14px;
+@f16: 12px;
+@f18: 18px;
+@f20: 20px;
+@f22: 22px;
+@f24: 24px;
+@f30: 30px;
+@f36: 36px;
+
+// 颜色
+@w-color: white;
+@h-color: rgb(184, 179, 179);
+@b-color: black;
+@basecolor: #c20c0c;
+
+// 弹性布局函数
+.setDisplay(@f) {
+    display: @f;
+    display: -webkit-@f;
+    display: -moz-@f;
+    display: -ms-@f;
+    display: -o-@f;
+}
+
+.header {
+    background-color: @b-color;
+
+    ul {
+        .setDisplay(flex);
+        height: 50px;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        color: @w-color;
+        font-size: @f14;
+
+        li {
+            position: relative;
+
+            &.warn {
+                -webkit-box-flex: 1;
+                -webkit-flex: 1;
+                    -ms-flex: 1;
+                        flex: 1;
+            }
+
+            &+li {
+                padding-left: 12px;
+            }
+
+            img {
+                height: 25px;
+                padding: 0 10px;
+                cursor: pointer;
+            }
+
+            .scan {
+                position: absolute;
+                top: 37px;
+                left: -26px;
+                width: 120px;
+                color: @basecolor;
+                font-weight: bold;
+                z-index: 10;
+                display: none;
+                text-align: center;
+                background-color: @w-color;
+                border-radius: 8px;
+
+                img {
+                    height: 100px;
+                }
+            }
+
+            a {
+                color: @w-color;
+
+                &.sign {
+                    color: @basecolor;
+                }
+            }
+        }
+    }
+
+}
+
+// 尾部
+.footer {
+    .contact {
+        padding: 20px;
+        .setDisplay(flex);
+        -webkit-box-orient: vertical;;
+        -webkit-box-direction: normal;;
+        -webkit-flex-direction: column;;
+            -ms-flex-direction: column;;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        background-color: @basecolor;
+        color: @w-color;
+
+        >div {
+            .setDisplay(flex);
+            -webkit-box-pack: justify;;
+            -webkit-justify-content: space-between;;
+                -ms-flex-pack: justify;;
+                    justify-content: space-between;
+            border-bottom: 1px dashed @w-color;
+            padding-bottom: 20px;
+
+            .left {
+                .setDisplay(flex);
+                -webkit-box-orient: vertical;;
+                -webkit-box-direction: normal;;
+                -webkit-flex-direction: column;;
+                    -ms-flex-direction: column;;
+                        flex-direction: column;
+
+                >img {
+                    width: 140px;
+                    cursor: pointer;
+                }
+
+                >div {
+                    /*    position: relative; */
+                    .setDisplay(flex);
+                    -webkit-box-align: center;;
+                    -webkit-align-items: center;;
+                        -ms-flex-align: center;;
+                            align-items: center;
+
+                    img {
+                        height: 30px;
+                        cursor: pointer;
+                        padding: 0 10px;
+                    }
+
+                    .scan-box {
+                        position: relative;
+
+                        .scan {
+                            height: 100px;
+                            position: absolute;
+                            top: -104px;
+                            left: -27px;
+                            display: none
+                        }
+                    }
+                }
+            }
+
+
+            .right {
+                .setDisplay(flex);
+                -webkit-box-pack: justify;;
+                -webkit-justify-content: space-between;;
+                    -ms-flex-pack: justify;;
+                        justify-content: space-between;
+
+                li {
+                    text-align: right;
+
+                    a {
+                        color: @w-color;
+                        font-size: @f14;
+                    }
+
+                    &+li {
+                        margin-left: 30px;
+                        margin-top: 20px;
+                    }
+
+                    &:nth-child(1) a {
+                        font-size: @f18;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+        }
+
+        >ul {
+            .setDisplay(flex);
+            -webkit-box-align: center;;
+            -webkit-align-items: center;;
+                -ms-flex-align: center;;
+                    align-items: center;
+            height: 30px;
+
+            li {
+                &+li {
+                    padding-left: 20px;
+                }
+
+                a {
+                    color: @w-color;
+                }
+            }
+
+        }
+
+    }
+
+    .copymesg {
+        text-align: center;
+        height: 50px;
+        line-height: 20px;
+    }
+}

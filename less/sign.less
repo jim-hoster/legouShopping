@@ -1,0 +1,177 @@
+@charset 'utf-8';
+@import "./common.less";
+
+.nav {
+    .setDisplay(flex);
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+        color: @basecolor;
+        font-size: @f30;
+    }
+}
+
+.sign-box {
+    .setDisplay(flex);
+    background-color: @w-color;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 1px solid @h-color;
+
+    .sign {
+        flex: 1;
+        /*   padding: 40px; */
+        .setDisplay(flex);
+        flex-direction: column;
+        align-items: center;
+
+        .detail {
+            flex: 1;
+            .setDisplay(flex);
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 20px;
+
+            >p {
+                width: 300px;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                border: 10px;
+                border: 1px solid @basecolor;
+                color: @basecolor;
+                font-size: @f20;
+                cursor: pointer;
+
+                &+p {
+                    margin-top: 50px;
+                }
+
+                &+div {
+                    margin-top: 40px;
+                }
+            }
+
+            >div {
+                display: none;
+
+                >p {
+                    border: 1px solid @h-color;
+                    width: 400px;
+                    height: 50px;
+                    line-height: 50px;
+                    padding: 0 10px;
+                    position: relative;
+                    &.redBorder{
+                        border: 1px solid  @basecolor;
+                    }
+                    &.greenBorder{
+                        border: 1px solid  green;
+                    }
+
+                    >.errMsg {
+                        position: absolute;
+                        top: 36px;
+                        left: 42px;
+                        color: @basecolor;
+                    }
+
+                    &+p {
+                        margin-top: 24px;
+                    }
+
+                    input {
+                        flex: 1;
+                        margin-left: 4px;
+                        border: none;
+                        outline: none;
+                        width: 358px;
+                    }
+
+                    img {
+                        height: 30px;
+                    }
+                    &.pwd{
+                        position: relative;
+                        #pwdEye{
+                            position: absolute;
+                            top: 8px;
+                            right: 14px;
+                        }
+                    }
+
+                    &.nickname {}
+
+                    &#submitBtn {
+                        background-color: @basecolor;
+                        border: none;
+                        text-align: center;
+
+                        input {
+                            background-color: @basecolor;
+                            font-size: @f20;
+                            color: @w-color;
+                        }
+                    }
+
+                    &.has {
+                        border: none;
+                        margin-top: 6px;
+                        height: 20px;
+                        text-align: right;
+
+                        span {
+                            position: absolute;
+                            top: -14px;
+                            right: 13px;
+                        }
+
+                    }
+
+                    &.img-verify {
+                        width: 100%;
+                        border: none;
+                        position: relative;
+
+                        input {
+                            border: 1px solid @h-color;
+                            text-indent: 10px;
+                            height: 50px;
+                        }
+
+                        span {
+                            display: inline-block;
+                            width: 50%;
+                            height: 50px;
+                            margin-left: 20px;
+
+                            .vfy-message {
+                                position: absolute;
+                                top: 48px;
+                                left: 120px;
+                                font-size: 14px;
+                                color: red;
+                                position: absolute;
+                                top: 10px;
+                                left: 20px;
+                            }
+
+                            #verifyCanvas {
+                                width: 200px;
+                                height: 50px;
+                                border-radius: 4px;
+                                border: 1px solid red;
+                            }
+
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+

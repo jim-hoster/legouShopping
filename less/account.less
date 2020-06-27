@@ -1,0 +1,114 @@
+@import './common.less';
+
+#account {
+    .setDisplay(flex);
+    -webkit-box-orient: vertical;
+    ;
+    -webkit-box-direction: normal;
+    ;
+    -webkit-flex-direction: column;
+    ;
+    -ms-flex-direction: column;
+    ;
+    flex-direction: column;
+
+    h2 {
+        color: @basecolor;
+        padding: 10px;
+        border-bottom: 3px solid @basecolor
+    }
+
+    #accountDetail {
+        .setDisplay(flex);
+        padding: 20px;
+        height: 100px;
+        border-bottom: 1px solid @h-color;
+
+        >img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        div {
+            .setDisplay(flex);
+            -webkit-box-orient: vertical;
+            ;
+            -webkit-box-direction: normal;
+            ;
+            -webkit-flex-direction: column;
+            ;
+            -ms-flex-direction: column;
+            ;
+            flex-direction: column;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+        }
+
+
+    }
+
+    #recharge {
+        .setDisplay(flex);
+        -webkit-box-pack: center;
+        ;
+        -webkit-justify-content: center;
+        ;
+        -ms-flex-pack: center;
+        ;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        height: 30px;
+
+        p {
+            width: 30%;
+            font-size: @f18;
+
+            .recharge_text {
+                color: @basecolor;
+            }
+        }
+
+    }
+
+    #escrowAccount {
+        .setDisplay(flex);
+        -webkit-box-pack: center;
+        ;
+        -webkit-justify-content: center;
+        ;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin: 20px 0;
+
+        span {
+            padding: 20px;
+            background-color: @basecolor;
+            cursor: pointer;
+
+            a {
+                color: @w-color;
+                font-size: @f18;
+
+            }
+
+            &+span {
+                margin-left: 20px;
+            }
+        }
+    }
+
+
+
+
+}
